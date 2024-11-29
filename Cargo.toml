@@ -1,0 +1,28 @@
+[package]
+name = "morphoex"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# reth
+reth = { git = "https://github.com/paradigmxyz/reth.git" }
+reth-exex = { git = "https://github.com/paradigmxyz/reth.git", features = [
+    "serde",
+] }
+reth-node-ethereum = { git = "https://github.com/paradigmxyz/reth.git" }
+reth-tracing = { git = "https://github.com/paradigmxyz/reth.git" }
+reth-primitives = { git = "https://github.com/paradigmxyz/reth" }
+reth-node-api = { git = "https://github.com/paradigmxyz/reth" }
+
+# alloy
+alloy-sol-types = { version = "0.8", features = ["json"] }
+alloy-primitives = { version = "0.8.9", default-features = false }
+reth-execution-types = { git = "https://github.com/paradigmxyz/reth" }
+
+# misc
+eyre = "0.6"
+rusqlite = { version = "0.31.0", features = ["bundled"] }
+
+# async
+futures = { version = "0.3", features = ["std"] }
+tokio = { version = "1.0", features = ["full"] }
